@@ -9,9 +9,24 @@ public class FirstRatings{
 
     public FirstRatings() {
         this.movieList = new ArrayList<Movie>();
+        this.raterList = new ArrayList<Rater>();
     }
- 
+
+    public FirstRatings(String movieFileName, String raterFileName) {
+        this.movieList = loadMovies(movieFileName);
+        this.raterList = loadRaters(raterFileName);
+    }
+
+    public ArrayList<Movie> getMovieList() {
+        return movieList;
+    }
+
+    public ArrayList<Rater> getRaterList() {
+        return raterList;
+    }
+
     public ArrayList<Movie> loadMovies(String filename) {
+        filename = "data/" + filename;
         ArrayList<Movie> movieListTemp = new ArrayList<Movie>();
 
         FileResource fr = new FileResource(filename);
@@ -32,13 +47,16 @@ public class FirstRatings{
     }
     
     public void testloadMovies() {
-        this.movieList = loadMovies("data/ratedmovies_short.csv");
+        this.movieList = loadMovies("ratedmoviesfull.csv");
+        System.out.println("total " + this.movieList.size());
+
         System.out.println("comedy number " + getNumOfMoviesWithGenre("Comedy"));
         System.out.println("getNumOfMoviesGreaterThanMin 150 " + getNumOfMoviesGreaterThanMin(150));
         System.out.println("map of director + " + getMapOfDirectors());
     }
     
     public ArrayList<Rater> loadRaters(String filename) {
+        filename = "data/" + filename;
         ArrayList<Rater> raterListTemp = new ArrayList<>();
         FileResource fr = new FileResource(filename);
         outLoop:
@@ -66,10 +84,10 @@ public class FirstRatings{
     }
 
     public void testLoadRaters() {
-        this.raterList = loadRaters("data/ratings_short.csv");
+        this.raterList = loadRaters("ratings.csv");
         System.out.println("raterList size " + this.raterList.size());
 
-        System.out.println("getNumOfRatings of 2 " + getNumOfRatings("2"));
+        System.out.println("getNumOfRatings of 193 " + getNumOfRatings("193"));
 
         System.out.println("getMaxOfRatings, what is maximum number " + getMaxOfRatings()[0]);
         System.out.println("getMaxOfRatings, how many raters with this max num " + getMaxOfRatings()[1]);
@@ -103,12 +121,32 @@ public class FirstRatings{
         for (Rater rater: this.raterList) {
             if (rater.numRatings() == max) {
                 numOfRatersWithMaxRatings++;
+                System.out.println("rater.getID() " + rater.getID());
             }
         }
         return new int[]{max, numOfRatersWithMaxRatings};
     }
 
-    private int getNumOfRatingsForAMovie(String movie_id) {
+    public int[] getMinOfRatings() {
+        int min = 0;
+        int numOfRatersWithMinRatings = 0;
+
+        for (Rater rater: this.raterList) {
+            if (rater.numRatings() < min) {
+                min = rater.numRatings();
+            }
+        }
+
+        for (Rater rater: this.raterList) {
+            if (rater.numRatings() == min) {
+                numOfRatersWithMinRatings++;
+                System.out.println("rater.getID() " + rater.getID());
+            }
+        }
+        return new int[]{min, numOfRatersWithMinRatings};
+    }
+
+    public int getNumOfRatingsForAMovie(String movie_id) {
         int res = 0;
         for (Rater rater: this.raterList) {
             for (String ratingItem: rater.getItemsRated()){
@@ -131,7 +169,7 @@ public class FirstRatings{
     private int getNumOfMoviesWithGenre(String genre) {
         int res = 0;
         for (Movie movie: this.movieList) {
-            if (movie.getGenres().equals(genre)) res ++;
+            if (movie.getGenres().contains(genre)) res ++;
         }
         return res;
     }
