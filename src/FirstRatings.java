@@ -4,25 +4,25 @@ import org.apache.commons.csv.*;
 
 public class FirstRatings{
     private ArrayList<Movie> movieList;
-    private ArrayList<Rater> raterList;
+    private ArrayList<IRater> efficientRaterList;
 
 
     public FirstRatings() {
         this.movieList = new ArrayList<Movie>();
-        this.raterList = new ArrayList<Rater>();
+        this.efficientRaterList = new ArrayList<IRater>();
     }
 
     public FirstRatings(String movieFileName, String raterFileName) {
         this.movieList = loadMovies(movieFileName);
-        this.raterList = loadRaters(raterFileName);
+        this.efficientRaterList = loadRaters(raterFileName);
     }
 
     public ArrayList<Movie> getMovieList() {
         return movieList;
     }
 
-    public ArrayList<Rater> getRaterList() {
-        return raterList;
+    public ArrayList<IRater> getEfficientRaterList() {
+        return efficientRaterList;
     }
 
     public ArrayList<Movie> loadMovies(String filename) {
@@ -55,9 +55,9 @@ public class FirstRatings{
         System.out.println("map of director + " + getMapOfDirectors());
     }
     
-    public ArrayList<Rater> loadRaters(String filename) {
+    public ArrayList<IRater> loadRaters(String filename) {
         filename = "data/" + filename;
-        ArrayList<Rater> raterListTemp = new ArrayList<>();
+        ArrayList<IRater> efficientRaterListTemp = new ArrayList<>();
         FileResource fr = new FileResource(filename);
         outLoop:
         for (CSVRecord record : fr.getCSVParser()) {
@@ -67,25 +67,25 @@ public class FirstRatings{
             int ratingScoreInt = Integer.parseInt(ratingScore);
             double ratingScoreDouble = (double) ratingScoreInt;
 
-            for (Rater rater:raterListTemp) {
-                // if we have the rater, then we add rating and continue to next record
-                if (rater.getID().equals(rater_id)){
-                    rater.addRating(movie_id,ratingScoreDouble);
+            for (IRater efficientRater : efficientRaterListTemp) {
+                // if we have the efficientRater, then we add rating and continue to next record
+                if (efficientRater.getID().equals(rater_id)){
+                    efficientRater.addRating(movie_id,ratingScoreDouble);
                     continue outLoop;
                 }
             }
-            // if we do not have the rater, then we create the rater then add the rating and continue to next record
-            Rater rater = new Rater(rater_id);
-            rater.addRating(movie_id,ratingScoreDouble);
-            raterListTemp.add(rater);
+            // if we do not have the efficientRater, then we create the efficientRater then add the rating and continue to next record
+            IRater efficientRater = new EfficientRater(rater_id);
+            efficientRater.addRating(movie_id,ratingScoreDouble);
+            efficientRaterListTemp.add(efficientRater);
         }
 
-        return raterListTemp;
+        return efficientRaterListTemp;
     }
 
     public void testLoadRaters() {
-        this.raterList = loadRaters("ratings.csv");
-        System.out.println("raterList size " + this.raterList.size());
+        this.efficientRaterList = loadRaters("ratings.csv");
+        System.out.println("efficientRaterList size " + this.efficientRaterList.size());
 
         System.out.println("getNumOfRatings of 193 " + getNumOfRatings("193"));
 
@@ -99,9 +99,9 @@ public class FirstRatings{
     }
 
     private int getNumOfRatings(String rater_id) {
-        for (Rater rater: this.raterList) {
-            if (rater.getID().equals(rater_id)) {
-                return rater.numRatings();
+        for (IRater efficientRater : this.efficientRaterList) {
+            if (efficientRater.getID().equals(rater_id)) {
+                return efficientRater.numRatings();
             }
         }
         return 0;
@@ -112,16 +112,16 @@ public class FirstRatings{
         int max = 0;
         int numOfRatersWithMaxRatings = 0;
 
-        for (Rater rater: this.raterList) {
-            if (rater.numRatings() > max) {
-                max = rater.numRatings();
+        for (IRater efficientRater : this.efficientRaterList) {
+            if (efficientRater.numRatings() > max) {
+                max = efficientRater.numRatings();
             }
         }
 
-        for (Rater rater: this.raterList) {
-            if (rater.numRatings() == max) {
+        for (IRater efficientRater : this.efficientRaterList) {
+            if (efficientRater.numRatings() == max) {
                 numOfRatersWithMaxRatings++;
-                System.out.println("rater.getID() " + rater.getID());
+                System.out.println("efficientRater.getID() " + efficientRater.getID());
             }
         }
         return new int[]{max, numOfRatersWithMaxRatings};
@@ -131,16 +131,16 @@ public class FirstRatings{
         int min = 0;
         int numOfRatersWithMinRatings = 0;
 
-        for (Rater rater: this.raterList) {
-            if (rater.numRatings() < min) {
-                min = rater.numRatings();
+        for (IRater efficientRater : this.efficientRaterList) {
+            if (efficientRater.numRatings() < min) {
+                min = efficientRater.numRatings();
             }
         }
 
-        for (Rater rater: this.raterList) {
-            if (rater.numRatings() == min) {
+        for (IRater efficientRater : this.efficientRaterList) {
+            if (efficientRater.numRatings() == min) {
                 numOfRatersWithMinRatings++;
-                System.out.println("rater.getID() " + rater.getID());
+                System.out.println("efficientRater.getID() " + efficientRater.getID());
             }
         }
         return new int[]{min, numOfRatersWithMinRatings};
@@ -148,8 +148,8 @@ public class FirstRatings{
 
     public int getNumOfRatingsForAMovie(String movie_id) {
         int res = 0;
-        for (Rater rater: this.raterList) {
-            for (String ratingItem: rater.getItemsRated()){
+        for (IRater efficientRater : this.efficientRaterList) {
+            for (String ratingItem: efficientRater.getItemsRated()){
                 if (ratingItem.equals(movie_id)) res++;
             }
         }
@@ -158,8 +158,8 @@ public class FirstRatings{
 
     private int getNumOfMoviesRated() {
         HashSet<String> movieSet = new HashSet<>();
-        for (Rater rater: this.raterList) {
-            for (String ratingItem: rater.getItemsRated()){
+        for (IRater efficientRater : this.efficientRaterList) {
+            for (String ratingItem: efficientRater.getItemsRated()){
                 movieSet.add(ratingItem);
             }
         }

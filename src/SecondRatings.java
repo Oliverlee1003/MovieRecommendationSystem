@@ -10,7 +10,7 @@ import java.util.*;
 
 public class SecondRatings {
     private ArrayList<Movie> myMovies;
-    private ArrayList<Rater> myRaters;
+    private ArrayList<IRater> myEfficientRaters;
 
     public SecondRatings() {
         // default constructor
@@ -22,7 +22,7 @@ public class SecondRatings {
         // default constructor
         FirstRatings firstRatings = new FirstRatings();
         this.myMovies = firstRatings.loadMovies(moviefile);
-        this.myRaters = firstRatings.loadRaters(ratingsfile);
+        this.myEfficientRaters = firstRatings.loadRaters(ratingsfile);
     }
 
     public ArrayList<Movie> getMyMovies() {
@@ -34,18 +34,18 @@ public class SecondRatings {
     }
 
     public int getRaterSize() {
-        return this.myRaters.size();
+        return this.myEfficientRaters.size();
     }
 
     private double getAverageByID(String id, int minimalRaters) {
 
         int sumRatings = 0;
         int sumNumbers = 0;
-        for (Rater rater: this.myRaters) {
-            for (String ratingItem: rater.getItemsRated()){
+        for (IRater plainRater : this.myEfficientRaters) {
+            for (String ratingItem: plainRater.getItemsRated()){
                 if (ratingItem.equals(id)) {
                     sumNumbers++;
-                    sumRatings += rater.getRating(id);
+                    sumRatings += plainRater.getRating(id);
                 }
             }
         }
@@ -60,8 +60,8 @@ public class SecondRatings {
         ArrayList<Rating> ratingArrayList = new ArrayList<>();
 
         HashSet<String> movieSet = new HashSet<>();
-        for (Rater rater: this.myRaters) {
-            for (String ratingItem: rater.getItemsRated()){
+        for (IRater plainRater : this.myEfficientRaters) {
+            for (String ratingItem: plainRater.getItemsRated()){
                 if (! movieSet.contains(ratingItem)) {
                     double avgRating = getAverageByID(ratingItem, minimalRaters);
                     Rating rating = new Rating(ratingItem, avgRating);

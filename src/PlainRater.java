@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Rater here.
+ * Write a description of class PlainRater here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -8,11 +8,11 @@
 
 import java.util.*;
 
-public class Rater {
+public class PlainRater implements IRater{
     private String myID;
     private ArrayList<Rating> myRatings;
 
-    public Rater(String id) {
+    public PlainRater(String id) {
         myID = id;
         myRatings = new ArrayList<Rating>();
     }

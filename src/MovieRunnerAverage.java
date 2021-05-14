@@ -7,7 +7,7 @@ import java.util.*;
 
 public class MovieRunnerAverage {
 
-    public static void printAverageRatings() {
+    public static void MovieRunnerAverage() {
         SecondRatings secondRatings = new SecondRatings("ratedmovies_short.csv", "ratings_short.csv");
 
         System.out.println("number of movies " + secondRatings.getMovieSize());
@@ -51,7 +51,7 @@ public class MovieRunnerAverage {
 //                sum++;
 //                double min = 9999;
 //                String tempID = ""
-//                for (Rater rater: firstRatings.getRaterList()) {
+//                for (PlainRater rater: firstRatings.getPlainRaterList()) {
 //                    for (String ratingItem: rater.getItemsRated()){
 //                        if (ratingItem.equals(movie.getID())) {
 //                            if (rater.getRating(movie.getID()) < min) {
