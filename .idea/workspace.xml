@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7fb6fdd-d909-4bed-a187-619dceb0872d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DirectorsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GenreFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MinutesFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MovieRunnerWithFilters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThirdRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FourthRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RaterDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Recommender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/movieProjectBase/FirstRatings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/movieProjectBase/FirstRatings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/movieProjectBase/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/movieProjectBase/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FirstRatings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FirstRatings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/testRating.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/testRating.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,38 +23,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="276">
+              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
               <folding>
-                <marker date="1621122510179" expanded="true" signature="68:260" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DirectorsFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="26" />
-              <folding>
-                <element signature="e#125#126#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <marker date="1621122984754" expanded="true" signature="246:1140" ph="..." />
+                <marker date="1621153833576" expanded="true" signature="68:260" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MovieRunnerWithFilters.java">
+        <entry file="file://$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="183" column="46" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
+            <state relative-caret-position="71">
+              <caret line="193" column="63" selection-start-line="193" selection-start-column="23" selection-end-line="193" selection-end-column="63" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#printAverageRatings#0;class#MovieRunnerSimilarRatings#0" />
+                <element signature="method#printAverageRatingsByYearAfterAndGenre#0;class#MovieRunnerSimilarRatings#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FourthRatings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="98" column="89" selection-start-line="98" selection-start-column="89" selection-end-line="98" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#3047#3055#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RaterDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -64,27 +78,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ThirdRatings.java">
+        <entry file="file://$PROJECT_DIR$/src/IRater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlainRater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AllFilters.java">
+        <entry file="file://$PROJECT_DIR$/src/Rating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="90">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#182#183#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#489#490#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EfficientRater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+              <folding>
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,17 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>myRatings</find>
-      <find>g</find>
-      <find>toString</find>
-      <find>Compara</find>
-      <find>sort</find>
-      <find>System.out.p</find>
-      <find>getMaxOfRatings</find>
-      <find>FirstRating</find>
-      <find>PlainRater plainRater</find>
-      <find>new Plain</find>
-      <find>Rater</find>
       <find>HashMap</find>
       <find>addRating</find>
       <find>ra</find>
@@ -125,11 +153,23 @@
       <find>getTi</find>
       <find>getDirector</find>
       <find>size</find>
-      <find>printAverageRatings</find>
       <find>printAverageRatingsByYearAfter</find>
       <find>printAverageRatingsByYear</find>
       <find>printAverageRat</find>
       <find>printAverageRatingsByDirectorsAndMinutes</find>
+      <find>printAverageRatings</find>
+      <find>printAverageRatingsByYearAfterAndGenre</find>
+      <find>new Rating</find>
+      <find>getAverageByID</find>
+      <find>The Fault in Our Stars</find>
+      <find>dotProduct</find>
+      <find>getID</find>
+      <find>getSimilarRatings</find>
+      <find>printSimilarRatingsByGenre</find>
+      <find>printSimilarRatings</find>
+      <find>printSimilarRatingsByGenreAndMinutes</find>
+      <find>printSimilarRatingsByDirector</find>
+      <find>printSimilarRatingsByYearAfterAndMinutes</find>
     </findStrings>
     <replaceStrings>
       <replace>Rater plainRater</replace>
@@ -155,17 +195,21 @@
         <option value="$PROJECT_DIR$/src/GenreFilter.java" />
         <option value="$PROJECT_DIR$/src/MinutesFilter.java" />
         <option value="$PROJECT_DIR$/src/ThirdRatings.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/MovieRunnerWithFilters.java" />
         <option value="$PROJECT_DIR$/src/DirectorsFilter.java" />
+        <option value="$PROJECT_DIR$/src/Recommender.java" />
+        <option value="$PROJECT_DIR$/src/RaterDatabase.java" />
+        <option value="$PROJECT_DIR$/src/FourthRatings.java" />
+        <option value="$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="599" />
+    <option name="x" value="983" />
     <option name="y" value="25" />
-    <option name="width" value="1138" />
-    <option name="height" value="872" />
+    <option name="width" value="945" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -184,6 +228,12 @@
               <item name="movieProjectBase" type="b2602c69:ProjectViewProjectNode" />
               <item name="movieProjectBase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movieProjectBase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movieProjectBase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="movieProjectBase" type="b2602c69:ProjectViewProjectNode" />
@@ -253,18 +303,18 @@
       <workItem from="1620423492717" duration="3341000" />
       <workItem from="1620427325245" duration="648000" />
       <workItem from="1620428119253" duration="36009000" />
-      <workItem from="1620951255956" duration="12999000" />
+      <workItem from="1620951255956" duration="28013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55380000" />
+    <option name="totallyTimeSpent" value="70394000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="599" y="25" width="1138" height="872" extended-state="0" />
+    <frame x="983" y="25" width="945" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19251825" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16212003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -274,18 +324,18 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891247" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5126498" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.46645367" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43040684" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46634027" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.45938748" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.18774967" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32756326" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32680538" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.45225465" />
-      <window_info anchor="bottom" id="ExcelReader" order="13" weight="0.50732356" />
+      <window_info anchor="bottom" id="ExcelReader" order="13" weight="0.50550795" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -315,6 +365,30 @@
           <line>84</line>
           <properties />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/FourthRatings.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java</url>
+          <line>227</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java</url>
+          <line>231</line>
+          <properties />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -365,56 +439,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CustomComparator.java" />
-    <entry file="file://$PROJECT_DIR$/src/PlainRater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#1325#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="method#hasRating#0;class#Rater#0" />
-            <element signature="method#getRating#0;class#Rater#0" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="method#getItemsRated#0;class#Rater#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IRater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EfficientRater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#1071#1079#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Filter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -476,16 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FirstRatings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MinutesFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -493,16 +507,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MovieDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/DirectorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+        <state relative-caret-position="210">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
+            <marker date="1621123145426" expanded="true" signature="246:720" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThirdRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FirstRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MovieRunnerWithFilters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="148" column="20" selection-start-line="148" selection-end-line="180" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MovieRunnerAverage#0;class#MovieRunnerWithFilters#0" />
+            <element signature="method#printAverageRatingsByDirectors#1;class#MovieRunnerWithFilters#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="284">
           <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
           <folding>
             <element signature="e#1162#1163#0" expanded="true" />
@@ -515,10 +573,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EfficientRater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IRater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding>
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MovieDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AllFilters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
             <element signature="e#133#134#0" expanded="true" />
             <element signature="e#182#183#0" expanded="true" />
@@ -528,44 +626,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThirdRatings.java">
+    <entry file="file://$PROJECT_DIR$/src/RaterDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="238">
+          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlainRater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FourthRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="98" column="89" selection-start-line="98" selection-start-column="89" selection-end-line="98" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#3047#3055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MovieRunnerSimilarRatings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="193" column="63" selection-start-line="193" selection-start-column="23" selection-end-line="193" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#printAverageRatings#0;class#MovieRunnerSimilarRatings#0" />
+            <element signature="method#printAverageRatingsByYearAfterAndGenre#0;class#MovieRunnerSimilarRatings#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state relative-caret-position="276">
+          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding>
-            <marker date="1621122510179" expanded="true" signature="68:260" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MovieRunnerWithFilters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="183" column="46" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DirectorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <marker date="1621122984754" expanded="true" signature="246:1140" ph="..." />
+            <marker date="1621153833576" expanded="true" signature="68:260" ph="..." />
           </folding>
         </state>
       </provider>
