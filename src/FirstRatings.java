@@ -26,7 +26,9 @@ public class FirstRatings{
     }
 
     public ArrayList<Movie> loadMovies(String filename) {
-        filename = "data/" + filename;
+        if (!filename.contains("data/")) {
+            filename = "data/" + filename;
+        }
         ArrayList<Movie> movieListTemp = new ArrayList<Movie>();
 
         FileResource fr = new FileResource(filename);

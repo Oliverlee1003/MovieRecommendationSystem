@@ -10,9 +10,10 @@ public class Main {
 //        firstRatings.testLoadRaters();
           // MovieRunnerAverage.getHowManyMoviesHaveRatingsMoreThanFifty();
        //  System.out.println(MovieRunnerAverage.getHowManyMoviesHaveRatingsMoreThan(20));
-        MovieRunnerAverage.MovieRunnerAverage();
-
-        MovieRunnerAverage.getAverageRatingOneMovie();
+//        MovieRunnerAverage.MovieRunnerAverage();
+//
+//        MovieRunnerAverage.getAverageRatingOneMovie();
+        MovieRunnerWithFilters.printAverageRatingsByDirectorsAndMinutes();
 
     }
 }
