@@ -15,13 +15,3 @@
 
 > 5. Display recommended movies for a given user on a webpage.
 
-
-## Syllabus
-
-#### WEEK 1 Introducing the Recommender
-
-#### WEEK 2 Simple Recommendations
-
-#### WEEK 3 Interfaces, Filters, Database
-
-#### WEEK 4 Weighted Averages
